@@ -27,6 +27,12 @@ app.get("/unit2", (request, response) => {
 app.get("/index", (request, response) => {
   response.sendFile(__dirname + "/views/index.html");
 });
+app.get("/extra", (request, response) => {
+  response.sendFile(__dirname + "/views/extra.html");
+});
+app.get("/", (request, response) => {
+  response.sendFile(__dirname + "/views/home.html");
+});
 
 // listen for requests :)
 const listener = app.listen(process.env.PORT, () => {
